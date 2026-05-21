@@ -24,7 +24,7 @@ export default function Page() {
 
     let result = "CN";
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {
       result += numbers.charAt(
         Math.floor(Math.random() * numbers.length)
       );
@@ -58,11 +58,13 @@ export default function Page() {
               ×
             </button>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-center gap-4">
               {/* ICON */}
-              <div className="w-[22px] h-[22px] rounded-full bg-[#16a34a] flex items-center justify-center text-white text-[13px] mt-1">
-                ✓
-              </div>
+              <img
+    src="https://i.ibb.co/bj8BB4sk/Chat-GPT-Image-May-21-2026-03-00-47-PM.png"
+    alt="Success Logo"
+    className="w-5"
+  />
 
               {/* TEXT */}
               <div>
