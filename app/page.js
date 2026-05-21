@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Poppins } from "next/font/google";
 
 import { FaChevronDown } from "react-icons/fa";
@@ -7,6 +9,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { AiFillSound, AiOutlineCalendar } from "react-icons/ai";
 import { MdRefresh } from "react-icons/md";
 import { GoHome } from "react-icons/go";
+import { MdApps } from "react-icons/md";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,21 +17,93 @@ const poppins = Poppins({
 });
 
 export default function Page() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const generateCRN = () => {
+    const numbers = "0123456789";
+
+    let result = "CN";
+
+    for (let i = 0; i < 10; i++) {
+      result += numbers.charAt(
+        Math.floor(Math.random() * numbers.length)
+      );
+    }
+
+    return result;
+  };
+
+  const [crn, setCrn] = useState(generateCRN());
+
+  const handleSubmit = () => {
+    setCrn(generateCRN());
+
+    setShowPopup(true);
+  };
+
   return (
     <div
-      className={`${poppins.className} w-full min-h-screen bg-[#f4f1eb] overflow-x-hidden`}
+      className={`${poppins.className} w-full min-h-screen bg-[#f4f1eb] overflow-x-hidden relative`}
     >
+      {/* POPUP */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/50 z-[9999] flex items-center justify-center px-4">
+          {/* BOX */}
+          <div className="bg-white w-full max-w-[520px] rounded-[10px] shadow-2xl relative p-6 md:p-8">
+            {/* CLOSE */}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-3 right-4 text-[28px] text-[#777]"
+            >
+              ×
+            </button>
+
+            <div className="flex items-start gap-4">
+              {/* ICON */}
+              <div className="w-[22px] h-[22px] rounded-full bg-[#16a34a] flex items-center justify-center text-white text-[13px] mt-1">
+                ✓
+              </div>
+
+              {/* TEXT */}
+              <div>
+                <p className="text-[16px] md:text-[18px] leading-[32px] text-[#333]">
+                  We have lodged your complaint successfully.
+                </p>
+
+                <p className="text-[16px] md:text-[18px] leading-[32px] text-[#333]">
+                  Please note your CRN (Complaint Unique
+                  Reference Number) is
+
+                  <span className="font-bold ml-2">
+                    {crn}
+                  </span>
+                </p>
+
+                <p className="text-[16px] md:text-[18px] leading-[32px] text-[#333] mt-5">
+                  We are working on providing status.
+                  Please recheck after some time
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* TOP BAR */}
       <div className="w-full bg-[#f5f5f5] border-b border-[#e5e5e5]">
         <div className="max-w-[1540px] mx-auto h-[42px] flex items-center justify-end px-3 md:px-6">
           <div className="flex items-center gap-3 md:gap-8 text-[11px] md:text-[13px] text-[#4d4d4d]">
             <span>Careers</span>
+
             <span>Contact us</span>
+
             <span>Skip to content</span>
 
             <div className="flex items-center gap-2 md:gap-3">
               <span>A+</span>
+
               <span>A</span>
+
               <span>A-</span>
             </div>
 
@@ -51,7 +126,7 @@ export default function Page() {
               <img
                 src="https://i.ibb.co/8DrrsDY6/Chat-GPT-Image-May-21-2026-02-06-00-PM.png"
                 alt="NPCI Logo"
-                className="w-[100px] md:w-[150px] object-contain"
+                className="w-[70px] md:w-[100px] object-contain"
               />
             </div>
 
@@ -85,15 +160,10 @@ export default function Page() {
 
           {/* BUTTON */}
           <button className="h-[50px] md:h-[58px] px-6 md:px-8 rounded-[16px] bg-[#f89a1d] flex items-center justify-center gap-4 text-[16px] md:text-[18px] font-semibold text-black w-full md:w-auto">
-            <span>All Products</span>
+  <span>All Products</span>
 
-            <div className="grid grid-cols-2 gap-[3px]">
-              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
-              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
-              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
-              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
-            </div>
-          </button>
+  <MdApps className="text-[22px] md:text-[26px]" />
+</button>
         </div>
       </div>
 
@@ -102,7 +172,7 @@ export default function Page() {
         <div className="max-w-[1540px] mx-auto px-3 md:px-6 py-12 md:py-0 md:h-[230px] flex items-center justify-center">
           <div className="w-full">
             {/* BREADCRUMB */}
-            <div className="flex items-center gap-2 text-[11px] md:text-[13px] text-white mb-6 md:mb-0 md:absolute">
+            <div className="flex items-center gap-2 text-[11px] md:text-[13px] text-white mt-[-64] md:mb-0 md:absolute">
               <GoHome className="text-[15px]" />
 
               <span>/</span>
@@ -185,7 +255,6 @@ export default function Page() {
 
               {/* RIGHT FORM */}
               <div className="w-full overflow-hidden">
-                {/* PRODUCT */}
                 <div className="w-full md:max-w-[560px]">
                   <Label text="Select Product*" />
 
@@ -198,7 +267,6 @@ export default function Page() {
                   <Select />
                 </div>
 
-                {/* CARD */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mt-8 md:mt-14">
                   <div>
                     <Label text="First 6 digits of your card number*" />
@@ -213,7 +281,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* TRANSACTION */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mt-8 md:mt-10">
                   <div>
                     <Label text="Date of transaction*" />
@@ -242,7 +309,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* AMOUNT */}
                 <div className="w-full md:max-w-[560px] mt-8 md:mt-10">
                   <Label text="Transaction amount*" />
 
@@ -253,7 +319,6 @@ export default function Page() {
                   </p>
                 </div>
 
-                {/* BANK */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mt-8 md:mt-12">
                   <div>
                     <Label text="Bank Name*" />
@@ -273,7 +338,6 @@ export default function Page() {
                   </div>
                 </div>
 
-                {/* CAPTCHA */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mt-8 md:mt-14 items-end">
                   <div>
                     <Label text="Captcha" />
@@ -302,7 +366,10 @@ export default function Page() {
 
                 {/* BUTTON */}
                 <div className="flex justify-center md:justify-end mt-8 md:mt-12">
-                  <button className="bg-[#f89a1d] hover:bg-[#ef8d08] h-[56px] md:h-[64px] w-full md:w-auto px-10 md:px-16 rounded-[10px] text-[16px] md:text-[18px] font-semibold text-black flex items-center justify-center gap-4 md:gap-5">
+                  <button
+                    onClick={handleSubmit}
+                    className="bg-[#f89a1d] hover:bg-[#ef8d08] h-[56px] md:h-[64px] w-full md:w-auto px-10 md:px-16 rounded-[10px] text-[16px] md:text-[18px] font-semibold text-black flex items-center justify-center gap-4 md:gap-5"
+                  >
                     Save & Proceed
 
                     <MdOutlineKeyboardArrowRight className="text-[22px] md:text-[28px]" />
