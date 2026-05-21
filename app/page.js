@@ -2,6 +2,13 @@
 
 import { Poppins } from "next/font/google";
 
+import { FaChevronDown } from "react-icons/fa";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { AiFillSound } from "react-icons/ai";
+import { MdRefresh } from "react-icons/md";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { GoHome } from "react-icons/go";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -28,7 +35,8 @@ export default function Page() {
 
             <div className="flex items-center gap-1">
               <span>English</span>
-              <span className="text-[9px]">▼</span>
+
+              <FaChevronDown className="text-[9px]" />
             </div>
           </div>
         </div>
@@ -54,22 +62,26 @@ export default function Page() {
             <div className="flex flex-wrap items-center gap-4 md:gap-10 text-[14px] md:text-[18px] font-medium text-[#232323]">
               <div className="flex items-center gap-2">
                 <span>About NPCI</span>
-                <span className="text-[10px]">▼</span>
+
+                <FaChevronDown className="text-[10px]" />
               </div>
 
               <div className="flex items-center gap-2">
                 <span>Customer</span>
-                <span className="text-[10px]">▼</span>
+
+                <FaChevronDown className="text-[10px]" />
               </div>
 
               <div className="flex items-center gap-2">
                 <span>Business</span>
-                <span className="text-[10px]">▼</span>
+
+                <FaChevronDown className="text-[10px]" />
               </div>
 
               <div className="flex items-center gap-2">
                 <span>Statistics</span>
-                <span className="text-[10px]">▼</span>
+
+                <FaChevronDown className="text-[10px]" />
               </div>
             </div>
           </div>
@@ -93,11 +105,15 @@ export default function Page() {
         <div className="max-w-[1540px] mx-auto px-3 md:px-6 py-12 md:py-0 md:h-[230px] flex items-center justify-center">
           <div className="w-full">
             {/* BREADCRUMB */}
-            <div className="flex items-center gap-2 text-[11px] md:text-[13px] text-white mb-6 md:mb-0 md:absolute">
-              <span>⌂</span>
+            <div className="flex items-center gap-2 text-[11px] md:text-[13px] mt-[-70] text-white  md:mb-0 md:absolute">
+              <GoHome className="text-[15px]" />
+
               <span>/</span>
+
               <span>Customer</span>
+
               <span>/</span>
+
               <span>Complaint Register</span>
             </div>
 
@@ -124,15 +140,13 @@ export default function Page() {
               </p>
             </div>
 
-            <span className="text-[30px] md:text-[38px] text-[#444]">
-              ›
-            </span>
+            <MdOutlineKeyboardArrowRight className="text-[30px] md:text-[38px] text-[#444]" />
           </div>
         </div>
 
         {/* TITLE */}
         <div className="max-w-[1540px] mx-auto px-3 md:px-6 mt-8">
-          <h2 className="text-[22px] md:text-[22px] font-semibold text-black">
+          <h2 className="text-[22px] font-semibold text-black">
             Kindly select the Product type and fill the form
           </h2>
 
@@ -177,11 +191,13 @@ export default function Page() {
                 {/* PRODUCT */}
                 <div className="w-full md:max-w-[560px]">
                   <Label text="Select Product*" />
+
                   <Select />
                 </div>
 
                 <div className="w-full md:max-w-[560px] mt-6 md:mt-10">
                   <Label text="Transaction Type*" />
+
                   <Select />
                 </div>
 
@@ -189,11 +205,13 @@ export default function Page() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mt-8 md:mt-14">
                   <div>
                     <Label text="First 6 digits of your card number*" />
+
                     <Input />
                   </div>
 
                   <div>
                     <Label text="Last 4 digits of your card number*" />
+
                     <Input />
                   </div>
                 </div>
@@ -206,9 +224,7 @@ export default function Page() {
                     <div className="relative">
                       <Input />
 
-                      <div className="absolute right-4 md:right-5 top-1/2 -translate-y-1/2 text-[20px] md:text-[24px]">
-                        📅
-                      </div>
+                      <AiOutlineCalendar className="absolute right-4 md:right-5 top-1/2 -translate-y-1/2 text-[22px] md:text-[26px] text-[#444]" />
                     </div>
 
                     <p className="text-[12px] md:text-[14px] mt-2 md:mt-3 text-[#3d3d3d]">
@@ -244,6 +260,7 @@ export default function Page() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 mt-8 md:mt-12">
                   <div>
                     <Label text="Bank Name*" />
+
                     <Select />
                   </div>
 
@@ -269,18 +286,19 @@ export default function Page() {
                         1QUkE
                       </div>
 
-                      <button className="text-[28px] md:text-[34px] text-[#666]">
-                        ↻
+                      <button>
+                        <MdRefresh className="text-[28px] md:text-[34px] text-[#666]" />
                       </button>
 
-                      <button className="text-[28px] md:text-[34px] text-[#666]">
-                        🔊
+                      <button>
+                        <AiFillSound className="text-[28px] md:text-[34px] text-[#666]" />
                       </button>
                     </div>
                   </div>
 
                   <div>
                     <Label text="Write text from image*" />
+
                     <Input />
                   </div>
                 </div>
@@ -290,56 +308,11 @@ export default function Page() {
                   <button className="bg-[#f89a1d] hover:bg-[#ef8d08] h-[56px] md:h-[64px] w-full md:w-auto px-10 md:px-16 rounded-[10px] text-[16px] md:text-[18px] font-semibold text-black flex items-center justify-center gap-4 md:gap-5">
                     Save & Proceed
 
-                    <span className="text-[22px] md:text-[28px]">
-                      ›
-                    </span>
+                    <MdOutlineKeyboardArrowRight className="text-[22px] md:text-[28px]" />
                   </button>
                 </div>
               </div>
             </div>
-
-            {/* DISCLAIMER */}
-            <div className="mt-14 md:mt-20">
-              <h2 className="text-[34px] md:text-[48px] font-semibold text-[#232323] mb-8 md:mb-10">
-                Disclaimer
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a]">
-                <p>
-                  NPCI is facilitating customers of the
-                  Banks & other Institutions that are
-                  using payment systems operated by NPCI
-                  & are routing transactions through
-                  NPCI’s payment systems (“Members”), to
-                  check the status of a financial
-                  transaction in NPCI’s records and to
-                  register complaints with the Member/s
-                  & check status thereof.
-                </p>
-
-                <p>
-                  NPCI will make available the complaint
-                  to relevant Member/s where the
-                  complainant holds its account, for
-                  necessary action & Member/s shall be
-                  responsible to resolve the complaint.
-                  Once a complaint is registered or is
-                  closed on this website, the user may
-                  check the final status of such
-                  complaint or such transaction with its
-                  (Member) Bank or Institution using the
-                  relevant transaction details or
-                  Complaint Reference Number (CRN)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ */}
-          <div className="text-center mt-14 md:mt-16">
-            <h2 className="text-[38px] md:text-[58px] font-semibold text-[#232323] leading-tight">
-              Frequently Asked Questions
-            </h2>
           </div>
         </div>
       </div>
@@ -371,8 +344,8 @@ function Select() {
         <option>Select</option>
       </select>
 
-      <div className="absolute right-4 md:right-5 top-1/2 -translate-y-1/2 text-[14px] md:text-[18px]">
-        ▼
+      <div className="absolute right-4 md:right-5 top-1/2 -translate-y-1/2">
+        <FaChevronDown className="text-[14px] md:text-[18px]" />
       </div>
     </div>
   );
