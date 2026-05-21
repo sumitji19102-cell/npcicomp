@@ -4,9 +4,8 @@ import { Poppins } from "next/font/google";
 
 import { FaChevronDown } from "react-icons/fa";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { AiFillSound } from "react-icons/ai";
+import { AiFillSound, AiOutlineCalendar } from "react-icons/ai";
 import { MdRefresh } from "react-icons/md";
-import { AiOutlineCalendar } from "react-icons/ai";
 import { GoHome } from "react-icons/go";
 
 const poppins = Poppins({
@@ -48,14 +47,12 @@ export default function Page() {
           {/* LEFT */}
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-16">
             {/* LOGO */}
-            <div className="leading-none">
-              <h1 className="text-[38px] md:text-[54px] font-extrabold italic tracking-tight text-[#23356f]">
-                NPCI
-              </h1>
-
-              <p className="text-[10px] md:text-[14px] font-semibold text-[#23356f] tracking-wide mt-1">
-                ALWAYS FORWARD
-              </p>
+            <div className="flex items-center">
+              <img
+                src="https://i.ibb.co/8DrrsDY6/Chat-GPT-Image-May-21-2026-02-06-00-PM.png"
+                alt="NPCI Logo"
+                className="w-[100px] md:w-[150px] object-contain"
+              />
             </div>
 
             {/* MENUS */}
@@ -105,7 +102,7 @@ export default function Page() {
         <div className="max-w-[1540px] mx-auto px-3 md:px-6 py-12 md:py-0 md:h-[230px] flex items-center justify-center">
           <div className="w-full">
             {/* BREADCRUMB */}
-            <div className="flex items-center gap-2 text-[11px] md:text-[13px] mt-[-70] text-white  md:mb-0 md:absolute">
+            <div className="flex items-center gap-2 text-[11px] md:text-[13px] text-white mb-6 md:mb-0 md:absolute">
               <GoHome className="text-[15px]" />
 
               <span>/</span>
@@ -311,6 +308,70 @@ export default function Page() {
                     <MdOutlineKeyboardArrowRight className="text-[22px] md:text-[28px]" />
                   </button>
                 </div>
+
+                {/* DISCLAIMER */}
+                <div className="mt-14 md:mt-20">
+                  <h2 className="text-[34px] md:text-[48px] font-semibold text-[#232323] mb-8 md:mb-10">
+                    Disclaimer
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a]">
+                    <p>
+                      NPCI is facilitating customers of
+                      the Banks & other Institutions that
+                      are using payment systems operated
+                      by NPCI & are routing transactions
+                      through NPCI’s payment systems
+                      (“Members”), to check the status
+                      of a financial transaction in
+                      NPCI’s records and to register
+                      complaints with the Member/s &
+                      check status thereof.
+                    </p>
+
+                    <p>
+                      NPCI will make available the
+                      complaint to relevant Member/s
+                      where the complainant holds its
+                      account, for necessary action &
+                      Member/s shall be responsible to
+                      resolve the complaint. Once a
+                      complaint is registered or is
+                      closed on this website, the user
+                      may check the final status of such
+                      complaint or such transaction with
+                      its (Member) Bank or Institution
+                      using the relevant transaction
+                      details or Complaint Reference
+                      Number (CRN)
+                    </p>
+                  </div>
+                </div>
+
+                {/* FAQ SECTION */}
+                <div className="w-full mt-16 md:mt-24">
+                  <h2 className="text-center text-[34px] md:text-[58px] font-semibold text-[#111] leading-tight">
+                    Frequently Asked Questions
+                  </h2>
+
+                  <div className="w-full mt-10 md:mt-14">
+                    <FaqItem text="What is UPI?" />
+
+                    <FaqItem text="What is UPI Help Assistant ?" />
+
+                    <FaqItem text="What is an UPI-PIN?" />
+
+                    <FaqItem text="What happens if I enter wrong UPI-PIN during a transaction?" />
+
+                    <div className="flex justify-center mt-10 md:mt-14">
+                      <button className="bg-[#f89a1d] hover:bg-[#ef8d08] h-[58px] md:h-[72px] px-10 md:px-16 rounded-[16px] text-[18px] md:text-[28px] font-semibold text-black flex items-center justify-center gap-4 md:gap-5">
+                        View All
+
+                        <MdOutlineKeyboardArrowRight className="text-[24px] md:text-[34px]" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -347,6 +408,18 @@ function Select() {
       <div className="absolute right-4 md:right-5 top-1/2 -translate-y-1/2">
         <FaChevronDown className="text-[14px] md:text-[18px]" />
       </div>
+    </div>
+  );
+}
+
+function FaqItem({ text }) {
+  return (
+    <div className="w-full bg-[#ececf2] rounded-[8px] md:rounded-[10px] h-[72px] md:h-[92px] px-5 md:px-8 flex items-center justify-between mb-3 md:mb-4">
+      <h3 className="text-[16px] md:text-[22px] font-semibold text-[#111]">
+        {text}
+      </h3>
+
+      <FaChevronDown className="text-[18px] md:text-[22px] text-[#222]" />
     </div>
   );
 }
