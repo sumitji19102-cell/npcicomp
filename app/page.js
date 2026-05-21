@@ -377,44 +377,47 @@ export default function Page() {
                 </div>
 
                 {/* DISCLAIMER */}
-                <div className="mt-14 md:mt-20">
-                  <h2 className="text-[34px] md:text-[48px] font-semibold text-[#232323] mb-8 md:mb-10">
-                    Disclaimer
-                  </h2>
+              <div className="mt-14 md:mt-20">
+  <h2 className="text-[34px] md:text-[48px] font-semibold text-[#232323] mb-8 md:mb-10 text-left">
+    Disclaimer
+  </h2>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a]">
-                    <p>
-                      NPCI is facilitating customers of
-                      the Banks & other Institutions that
-                      are using payment systems operated
-                      by NPCI & are routing transactions
-                      through NPCI’s payment systems
-                      (“Members”), to check the status
-                      of a financial transaction in
-                      NPCI’s records and to register
-                      complaints with the Member/s &
-                      check status thereof.
-                    </p>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
+    
+    {/* LEFT */}
+    <p className="text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a] text-left">
+      NPCI is facilitating customers of
+      the Banks & other Institutions that
+      are using payment systems operated
+      by NPCI & are routing transactions
+      through NPCI’s payment systems
+      (“Members”), to check the status
+      of a financial transaction in
+      NPCI’s records and to register
+      complaints with the Member/s &
+      check status thereof.
+    </p>
 
-                    <p>
-                      NPCI will make available the
-                      complaint to relevant Member/s
-                      where the complainant holds its
-                      account, for necessary action &
-                      Member/s shall be responsible to
-                      resolve the complaint. Once a
-                      complaint is registered or is
-                      closed on this website, the user
-                      may check the final status of such
-                      complaint or such transaction with
-                      its (Member) Bank or Institution
-                      using the relevant transaction
-                      details or Complaint Reference
-                      Number (CRN)
-                    </p>
-                  </div>
-                </div>
+    {/* RIGHT */}
+    <p className="text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a] text-left">
+      NPCI will make available the
+      complaint to relevant Member/s
+      where the complainant holds its
+      account, for necessary action &
+      Member/s shall be responsible to
+      resolve the complaint. Once a
+      complaint is registered or is
+      closed on this website, the user
+      may check the final status of such
+      complaint or such transaction with
+      its (Member) Bank or Institution
+      using the relevant transaction
+      details or Complaint Reference
+      Number (CRN)
+    </p>
 
+  </div>
+</div>
                 {/* FAQ SECTION */}
                 <div className="w-full mt-16 md:mt-24">
                   <h2 className="text-center text-[34px] md:text-[58px] font-semibold text-[#111] leading-tight">
