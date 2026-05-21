@@ -93,6 +93,11 @@ export default function Page() {
       <div className="w-full bg-[#f5f5f5] border-b border-[#e5e5e5]">
         <div className="max-w-[1540px] mx-auto h-[42px] flex items-center justify-end px-3 md:px-6">
           <div className="flex items-center gap-3 md:gap-8 text-[11px] md:text-[13px] text-[#4d4d4d]">
+            <img
+    src="https://i.ibb.co/wF8V0Sbq/Chat-GPT-Image-May-21-2026-02-48-39-PM.png"
+    alt="Top Logo"
+    className="w-[26px] md:w-[34px] object-contain"
+  />
             <span>Careers</span>
 
             <span>Contact us</span>
@@ -197,9 +202,11 @@ export default function Page() {
         <div className="max-w-[1540px] mx-auto px-3 md:px-6">
           <div className="max-w-[1020px] mx-auto bg-[#f7f7f7] border border-[#bdbdbd] rounded-[22px] p-5 md:px-10 md:h-[120px] flex flex-col md:flex-row md:items-center justify-between gap-5">
             <div className="flex items-center gap-4 md:gap-6">
-              <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] rounded bg-[#eef2ff] flex items-center justify-center text-[13px] md:text-[14px] font-bold text-[#23356f]">
-                UPI
-              </div>
+               <img
+    src="https://i.ibb.co/Rp4ZC78n/Chat-GPT-Image-May-21-2026-02-45-11-PM.png"
+    alt="UPI Logo"
+    className="w-[30px] md:w-[75px] object-contain"
+  />
 
               <p className="text-[16px] md:text-[20px] leading-[28px] font-medium text-[#232323]">
                 Click here for queries related to UPI
@@ -378,13 +385,16 @@ export default function Page() {
 
                 {/* DISCLAIMER */}
               <div className="mt-14 md:mt-20">
-  <h2 className="text-[34px] md:text-[48px] font-semibold text-[#232323] mb-8 md:mb-10 text-left">
+
+  {/* HEADING */}
+  <h2 className="text-[34px] md:text-[48px] font-semibold text-[#232323] mb-8 md:mb-10 text-center">
     Disclaimer
   </h2>
 
+  {/* CONTENT */}
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
-    
-    {/* LEFT */}
+
+    {/* LEFT TEXT */}
     <p className="text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a] text-left">
       NPCI is facilitating customers of
       the Banks & other Institutions that
@@ -398,7 +408,7 @@ export default function Page() {
       check status thereof.
     </p>
 
-    {/* RIGHT */}
+    {/* RIGHT TEXT */}
     <p className="text-[15px] md:text-[17px] leading-[32px] md:leading-[38px] text-[#4a4a4a] text-left">
       NPCI will make available the
       complaint to relevant Member/s
