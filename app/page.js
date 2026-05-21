@@ -10,19 +10,17 @@ const poppins = Poppins({
 export default function Page() {
   return (
     <div
-      className={`${poppins.className} w-full min-h-screen bg-[#f7f4ef]`}
+      className={`${poppins.className} w-full min-h-screen bg-[#f4f1eb]`}
     >
-      {/* TOP HEADER */}
-      <div className="w-full bg-[#f7f7f7] border-b border-[#ececec]">
-        <div className="max-w-[1400px] mx-auto h-[36px] flex items-center justify-between px-4">
-          <div className="flex items-center gap-5 text-[11px] text-[#5d5d5d]">
+      {/* TOP BAR */}
+      <div className="w-full bg-[#f5f5f5] border-b border-[#e5e5e5]">
+        <div className="max-w-[1540px] mx-auto h-[42px] flex items-center justify-end px-6">
+          <div className="flex items-center gap-8 text-[13px] text-[#4d4d4d]">
             <span>Careers</span>
             <span>Contact us</span>
             <span>Skip to content</span>
-          </div>
 
-          <div className="flex items-center gap-4 text-[11px] text-[#5d5d5d]">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <span>A+</span>
               <span>A</span>
               <span>A-</span>
@@ -30,7 +28,7 @@ export default function Page() {
 
             <div className="flex items-center gap-1">
               <span>English</span>
-              <span className="text-[8px]">▼</span>
+              <span className="text-[9px]">▼</span>
             </div>
           </div>
         </div>
@@ -38,392 +36,348 @@ export default function Page() {
 
       {/* NAVBAR */}
       <div className="w-full bg-white border-b border-[#ececec]">
-        <div className="max-w-[1400px] mx-auto h-[74px] flex items-center justify-between px-4">
+        <div className="max-w-[1540px] mx-auto h-[88px] flex items-center justify-between px-6">
           {/* LEFT */}
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-16">
             {/* LOGO */}
             <div className="leading-none">
-              <h1 className="text-[32px] font-extrabold italic tracking-tight text-[#23356f]">
+              <h1 className="text-[54px] font-extrabold italic tracking-tight text-[#23356f]">
                 NPCI
               </h1>
 
-              <p className="text-[9px] font-semibold tracking-[1px] text-[#23356f] mt-[2px]">
+              <p className="text-[14px] font-semibold text-[#23356f] tracking-wide mt-1">
                 ALWAYS FORWARD
               </p>
             </div>
 
             {/* MENUS */}
-            <div className="hidden md:flex items-center gap-7 text-[14px] text-[#2f2f2f] font-medium">
-              <div className="flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-10 text-[18px] font-medium text-[#232323]">
+              <div className="flex items-center gap-2">
                 <span>About NPCI</span>
-                <span className="text-[9px]">▼</span>
+                <span className="text-[10px]">▼</span>
               </div>
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <span>Customer</span>
-                <span className="text-[9px]">▼</span>
+                <span className="text-[10px]">▼</span>
               </div>
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <span>Business</span>
-                <span className="text-[9px]">▼</span>
+                <span className="text-[10px]">▼</span>
               </div>
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <span>Statistics</span>
-                <span className="text-[9px]">▼</span>
+                <span className="text-[10px]">▼</span>
               </div>
             </div>
           </div>
 
           {/* BUTTON */}
-          <button className="h-[42px] px-5 rounded-[10px] bg-[#f89a1d] text-[14px] font-semibold text-black flex items-center gap-3">
+          <button className="h-[58px] px-8 rounded-[16px] bg-[#f89a1d] flex items-center gap-4 text-[18px] font-semibold text-black">
             <span>All Products</span>
 
-            <div className="grid grid-cols-2 gap-[2px]">
-              <div className="w-[4px] h-[4px] bg-black rounded-full"></div>
-              <div className="w-[4px] h-[4px] bg-black rounded-full"></div>
-              <div className="w-[4px] h-[4px] bg-black rounded-full"></div>
-              <div className="w-[4px] h-[4px] bg-black rounded-full"></div>
+            <div className="grid grid-cols-2 gap-[3px]">
+              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
+              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
+              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
+              <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
             </div>
           </button>
         </div>
       </div>
 
       {/* BREADCRUMB */}
-      <div className="max-w-[1400px] mx-auto px-4 pt-3">
-        <div className="flex items-center gap-2 text-[11px] text-[#7a7a7a]">
+      <div className="max-w-[1540px] mx-auto px-6 pt-5">
+        <div className="flex items-center gap-2 text-[13px] text-white absolute z-10">
           <span>⌂</span>
           <span>/</span>
           <span>Customer</span>
           <span>/</span>
-          <span className="text-[#4d4d4d]">
-            Complaint Register
-          </span>
+          <span>Complaint Register</span>
         </div>
       </div>
 
       {/* HERO */}
-      <div className="mt-3 w-full bg-gradient-to-r from-[#b66b17] via-[#3d2f74] to-[#00783e]">
-        <div className="max-w-[1400px] mx-auto h-[170px] flex items-center px-4">
-          <h1 className="text-white text-[50px] font-semibold">
+      <div className="mt-0 w-full bg-gradient-to-r from-[#b86d1a] via-[#35347d] to-[#00793d]">
+        <div className="max-w-[1540px] mx-auto h-[230px] flex items-center justify-center px-6">
+          <h1 className="text-[64px] font-semibold text-white">
             Other Product Complaint
           </h1>
         </div>
       </div>
 
-      {/* UPI BOX */}
-      <div className="max-w-[1400px] mx-auto px-4 mt-8">
-        <div className="bg-white border border-[#d7d7d7] rounded-[16px] h-[82px] flex items-center justify-between px-6">
-          <div className="flex items-center gap-4">
-            <div className="w-[42px] h-[42px] rounded bg-[#eef2ff] flex items-center justify-center text-[11px] font-bold text-[#23356f]">
-              UPI
+      {/* MAIN */}
+      <div className="w-full bg-[#f2ebe3] pt-8 pb-16">
+        {/* UPI BOX */}
+        <div className="max-w-[1540px] mx-auto px-6">
+          <div className="max-w-[1020px] mx-auto bg-[#f7f7f7] border border-[#bdbdbd] rounded-[22px] h-[120px] flex items-center justify-between px-10">
+            <div className="flex items-center gap-6">
+              <div className="w-[56px] h-[56px] rounded bg-[#eef2ff] flex items-center justify-center text-[14px] font-bold text-[#23356f]">
+                UPI
+              </div>
+
+              <p className="text-[20px] font-medium text-[#232323]">
+                Click here for queries related to UPI
+                Transactions & UPI Mandates.
+              </p>
             </div>
 
-            <p className="text-[16px] font-medium text-[#2f2f2f]">
-              Click here for queries related to UPI
-              Transactions & UPI Mandates.
-            </p>
+            <span className="text-[38px] text-[#444]">›</span>
           </div>
-
-          <span className="text-[22px] text-[#444]">›</span>
         </div>
-      </div>
 
-      {/* TITLE */}
-      <div className="max-w-[1400px] mx-auto px-4 mt-6">
-        <h2 className="text-[16px] font-semibold text-black">
-          Kindly select the Product type and fill the form
-        </h2>
+        {/* TITLE */}
+        <div className="max-w-[1540px] mx-auto px-6 mt-8">
+          <div className="max-w-[1540px]">
+            <h2 className="text-[22px] font-semibold text-black">
+              Kindly select the Product type and fill the form
+            </h2>
 
-        <div className="mt-2 text-[11px] leading-[18px] text-[#4f4f4f]">
-          <p>
-            Note: Complaints with respect to
-            fraudulent/unidentified/unauthorised
-            transactions to be raised with your
-            respective bank for redressal.
-          </p>
+            <div className="mt-5 text-[17px] leading-[32px] text-[#2e2e2e]">
+              <p>
+                <span className="font-semibold">Note:</span>{" "}
+                Complaints with respect to
+                fraudulent/unidentified/unauthorised
+                transactions to be raised with your
+                respective bank for redressal.
+              </p>
 
-          <p>* denotes mandatory fields</p>
-        </div>
-      </div>
-
-      {/* FORM */}
-      <div className="max-w-[1400px] mx-auto px-4 mt-6 pb-10">
-        <div className="w-full bg-[#efefef] rounded-[6px] p-5">
-          {/* ROW 1 */}
-          <div className="grid grid-cols-[150px_1fr] gap-5">
-            <div>
-              <h2 className="text-[11px] font-semibold text-black mt-3">
-                Select Product
-              </h2>
+              <p>* denotes mandatory fields</p>
             </div>
+          </div>
+        </div>
 
-            <div>
+        {/* FORM CONTAINER */}
+        <div className="max-w-[1540px] mx-auto px-6 mt-10">
+          <div className="bg-[#efefef] rounded-[12px] p-14">
+            {/* FORM GRID */}
+            <div className="grid grid-cols-[360px_1fr] gap-10">
+              {/* LEFT LABELS */}
+              <div className="space-y-[120px] pt-8">
+                <h2 className="text-[26px] font-semibold text-black text-right">
+                  Select Product
+                </h2>
+
+                <h2 className="text-[26px] font-semibold text-black text-right leading-[36px]">
+                  Card Related Details
+                </h2>
+
+                <h2 className="text-[26px] font-semibold text-black text-right leading-[36px]">
+                  Transaction Related Details
+                </h2>
+
+                <h2 className="text-[26px] font-semibold text-black text-right">
+                  Bank Details
+                </h2>
+              </div>
+
+              {/* RIGHT FORM */}
               <div>
-                <label className="block text-[10px] text-black mb-1">
-                  Select Product*
-                </label>
+                {/* PRODUCT */}
+                <div className="max-w-[560px]">
+                  <Label text="Select Product*" />
 
-                <div className="relative">
-                  <select className="w-full h-[28px] border border-[#bdbdbd] bg-white text-[12px] px-2 appearance-none outline-none rounded-[2px]">
-                    <option>NFS ATM</option>
-                  </select>
+                  <Select />
+                </div>
 
-                  <div className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px]">
-                    ▼
+                <div className="max-w-[560px] mt-10">
+                  <Label text="Transaction Type*" />
+
+                  <Select />
+                </div>
+
+                {/* CARD */}
+                <div className="grid grid-cols-2 gap-8 mt-14">
+                  <div>
+                    <Label text="First 6 digits of your card number*" />
+
+                    <Input />
+                  </div>
+
+                  <div>
+                    <Label text="Last 4 digits of your card number*" />
+
+                    <Input />
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-5">
-                <label className="block text-[10px] text-black mb-1">
-                  Transaction Type*
-                </label>
+                {/* TRANSACTION */}
+                <div className="grid grid-cols-2 gap-8 mt-10">
+                  <div>
+                    <Label text="Date of transaction*" />
 
-                <div className="relative">
-                  <select className="w-full h-[28px] border border-[#bdbdbd] bg-white text-[12px] px-2 appearance-none outline-none rounded-[2px]">
-                    <option>Select</option>
-                  </select>
+                    <div className="relative">
+                      <Input />
 
-                  <div className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px]">
-                    ▼
+                      <div className="absolute right-5 top-1/2 -translate-y-1/2 text-[24px]">
+                        📅
+                      </div>
+                    </div>
+
+                    <p className="text-[14px] mt-3 text-[#3d3d3d]">
+                      MM/DD/YYYY
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label text="Transaction ID/RRN*" />
+
+                    <Input />
+
+                    <p className="text-[14px] mt-3 leading-[20px] text-[#3d3d3d]">
+                      Please enter your transaction
+                      reference number that starts with
+                      1,7,8,9 or 0
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          {/* ROW 2 */}
-          <div className="grid grid-cols-[150px_1fr] gap-5 mt-4">
-            <div>
-              <h2 className="text-[11px] font-semibold text-black mt-4 leading-[18px]">
-                Card Related Details
-              </h2>
-            </div>
+                {/* AMOUNT */}
+                <div className="max-w-[560px] mt-10">
+                  <Label text="Transaction amount*" />
 
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-[10px] text-black mb-1">
-                  First 6 digits of your card number*
-                </label>
+                  <Input />
 
-                <input
-                  type="text"
-                  className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                />
-              </div>
+                  <p className="text-[14px] mt-3 text-[#3d3d3d]">
+                    Amount should be less than 10000
+                  </p>
+                </div>
 
-              <div>
-                <label className="block text-[10px] text-black mb-1">
-                  Last 4 digits of your card number*
-                </label>
+                {/* BANK */}
+                <div className="grid grid-cols-2 gap-8 mt-12">
+                  <div>
+                    <Label text="Bank Name*" />
 
-                <input
-                  type="text"
-                  className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                />
-              </div>
-            </div>
-          </div>
+                    <Select />
+                  </div>
 
-          {/* ROW 3 */}
-          <div className="grid grid-cols-[150px_1fr] gap-5 mt-4">
-            <div>
-              <h2 className="text-[11px] font-semibold text-black mt-4 leading-[18px]">
-                Transaction Related Details
-              </h2>
-            </div>
+                  <div>
+                    <Label text="Account Number" />
 
-            <div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[10px] text-black mb-1">
-                    Date of transaction*
-                  </label>
+                    <Input />
 
-                  <div className="relative">
-                    <input
-                      type="text"
-                      className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                    />
+                    <p className="text-[14px] mt-3 text-[#3d3d3d]">
+                      Please enter your bank account
+                      number
+                    </p>
+                  </div>
+                </div>
 
-                    <div className="absolute right-2 top-1/2 -translate-y-1/2 text-[12px]">
-                      📅
+                {/* CAPTCHA */}
+                <div className="grid grid-cols-2 gap-8 mt-14 items-end">
+                  <div>
+                    <Label text="Captcha" />
+
+                    <div className="flex items-center gap-4">
+                      <div className="w-[160px] h-[62px] border border-[#d4d4d4] bg-[#edf4ed] flex items-center justify-center text-[38px] italic tracking-[2px]">
+                        1QUkE
+                      </div>
+
+                      <button className="text-[34px] text-[#666]">
+                        ↻
+                      </button>
+
+                      <button className="text-[34px] text-[#666]">
+                        🔊
+                      </button>
                     </div>
                   </div>
 
-                  <p className="text-[9px] mt-1 text-[#444]">
-                    MM/DD/YYYY
-                  </p>
+                  <div>
+                    <Label text="Write text from image*" />
+
+                    <Input />
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-[10px] text-black mb-1">
-                    Transaction ID/RRN*
-                  </label>
+                {/* BUTTON */}
+                <div className="flex justify-end mt-12">
+                  <button className="bg-[#f89a1d] hover:bg-[#ef8d08] h-[64px] px-16 rounded-[10px] text-[18px] font-semibold text-black flex items-center gap-5">
+                    Save & Proceed
 
-                  <input
-                    type="text"
-                    className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                  />
-
-                  <p className="text-[8px] mt-1 leading-[10px] text-[#444]">
-                    Please enter your transaction
-                    reference number that starts
-                    with 1,7,8,9 or 0
-                  </p>
+                    <span className="text-[28px]">›</span>
+                  </button>
                 </div>
               </div>
+            </div>
 
-              <div className="mt-5 w-[48%]">
-                <label className="block text-[10px] text-black mb-1">
-                  Transaction amount*
-                </label>
+            {/* DISCLAIMER */}
+            <div className="mt-20">
+              <h2 className="text-[48px] font-semibold text-[#232323] mb-10">
+                Disclaimer
+              </h2>
 
-                <input
-                  type="text"
-                  className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                />
+              <div className="grid grid-cols-2 gap-12 text-[17px] leading-[38px] text-[#4a4a4a]">
+                <p>
+                  NPCI is facilitating customers of the
+                  Banks & other Institutions that are
+                  using payment systems operated by NPCI
+                  & are routing transactions through
+                  NPCI’s payment systems (“Members”), to
+                  check the status of a financial
+                  transaction in NPCI’s records and to
+                  register complaints with the Member/s
+                  & check status thereof.
+                </p>
 
-                <p className="text-[8px] mt-1 text-[#444]">
-                  Amount should be less than 10000
+                <p>
+                  NPCI will make available the complaint
+                  to relevant Member/s where the
+                  complainant holds its account, for
+                  necessary action & Member/s shall be
+                  responsible to resolve the complaint.
+                  Once a complaint is registered or is
+                  closed on this website, the user may
+                  check the final status of such
+                  complaint or such transaction with its
+                  (Member) Bank or Institution using the
+                  relevant transaction details or
+                  Complaint Reference Number (CRN)
                 </p>
               </div>
             </div>
           </div>
 
-          {/* ROW 4 */}
-          <div className="grid grid-cols-[150px_1fr] gap-5 mt-5">
-            <div>
-              <h2 className="text-[11px] font-semibold text-black mt-4">
-                Bank Details
-              </h2>
-            </div>
-
-            <div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[10px] text-black mb-1">
-                    Bank Name*
-                  </label>
-
-                  <div className="relative">
-                    <select className="w-full h-[28px] border border-[#bdbdbd] bg-white text-[12px] px-2 appearance-none outline-none rounded-[2px]">
-                      <option>Select</option>
-                    </select>
-
-                    <div className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px]">
-                      ▼
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10px] text-black mb-1">
-                    Account Number
-                  </label>
-
-                  <input
-                    type="text"
-                    className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                  />
-
-                  <p className="text-[8px] mt-1 text-[#444]">
-                    Please enter your bank account
-                    number
-                  </p>
-                </div>
-              </div>
-
-              {/* CAPTCHA */}
-              <div className="grid grid-cols-2 gap-4 mt-5 items-end">
-                <div>
-                  <label className="block text-[10px] text-black mb-1">
-                    Captcha
-                  </label>
-
-                  <div className="flex items-center gap-2">
-                    <div className="h-[28px] w-[70px] border border-[#d5d5d5] bg-[#edf4ed] flex items-center justify-center text-[18px] italic tracking-[1px]">
-                      WJMAE
-                    </div>
-
-                    <button className="text-[16px] text-[#666]">
-                      ↻
-                    </button>
-
-                    <button className="text-[16px] text-[#666]">
-                      🔊
-                    </button>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10px] text-black mb-1">
-                    Write text from image*
-                  </label>
-
-                  <input
-                    type="text"
-                    className="w-full h-[28px] border border-[#bdbdbd] bg-white px-2 text-[12px] outline-none rounded-[2px]"
-                  />
-                </div>
-              </div>
-
-              {/* BUTTON */}
-              <div className="flex justify-end mt-5">
-                <button className="bg-[#f89a1d] hover:bg-[#ef8d08] h-[34px] px-8 rounded-[4px] text-[12px] font-semibold text-black flex items-center gap-3">
-                  Save & Proceed
-
-                  <span className="text-[14px]">›</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* DISCLAIMER */}
-          <div className="mt-10">
-            <h2 className="text-[20px] font-semibold text-[#1f1f1f] mb-5">
-              Disclaimer
+          {/* FAQ */}
+          <div className="text-center mt-16">
+            <h2 className="text-[58px] font-semibold text-[#232323]">
+              Frequently Asked Questions
             </h2>
-
-            <div className="grid grid-cols-2 gap-8 text-[11px] leading-[22px] text-[#555]">
-              <p>
-                NPCI is facilitating customers of the
-                Banks & other Institutions that are
-                using payment systems operated by NPCI &
-                are routing transactions through NPCI’s
-                payment systems (“Members”), to check
-                the status of a financial transaction in
-                NPCI’s records and to register
-                complaints with the Member/s & check
-                status thereof.
-              </p>
-
-              <p>
-                NPCI will make available the complaint
-                to relevant Member/s where the
-                complainant holds its account, for
-                necessary action & Member/s shall be
-                responsible to resolve the complaint.
-                Once a complaint is registered or is
-                closed on this website, the user may
-                check the final status of such complaint
-                or such transaction with its (Member)
-                Bank or Institution using the relevant
-                transaction details or Complaint
-                Reference Number (CRN)
-              </p>
-            </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
 
-        {/* FAQ */}
-        <div className="mt-10 text-center">
-          <h2 className="text-[42px] font-semibold text-[#1f1f1f]">
-            Frequently Asked Questions
-          </h2>
-        </div>
+function Label({ text }) {
+  return (
+    <label className="block text-[16px] font-medium text-black mb-3">
+      {text}
+    </label>
+  );
+}
+
+function Input() {
+  return (
+    <input
+      type="text"
+      className="w-full h-[74px] border border-[#9f9f9f] bg-[#f8f8f8] rounded-[4px] px-5 text-[20px] outline-none"
+    />
+  );
+}
+
+function Select() {
+  return (
+    <div className="relative">
+      <select className="w-full h-[74px] border border-[#9f9f9f] bg-[#f8f8f8] rounded-[4px] px-5 text-[20px] appearance-none outline-none">
+        <option>Select</option>
+      </select>
+
+      <div className="absolute right-5 top-1/2 -translate-y-1/2 text-[18px]">
+        ▼
       </div>
     </div>
   );
